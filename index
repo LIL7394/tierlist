@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Tierlist</title>
+  <title>Tier List</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Firebase scripts -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
 </head>
 <body>
-  <h1>My Tierlist</h1>
+  <h1>Tier List</h1>
   
-  <div id="tier-container">
-    <div>S Tier: <input id="s-tier" placeholder="Add names..."></div>
-    <div>A Tier: <input id="a-tier" placeholder="Add names..."></div>
-    <div>B Tier: <input id="b-tier" placeholder="Add names..."></div>
+  <div id="tiers">
+    <div class="tier" id="S"><h2>S Tier</h2><div class="items" id="S-items"></div></div>
+    <div class="tier" id="A"><h2>A Tier</h2><div class="items" id="A-items"></div></div>
+    <div class="tier" id="B"><h2>B Tier</h2><div class="items" id="B-items"></div></div>
   </div>
 
-  <button onclick="saveTierList()">Save</button>
-  <button onclick="loadTierList()">Load</button>
+  <input type="text" id="new-item" placeholder="Add a new item">
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="saveTierList()">Save Tier List</button>
+  <button onclick="loadTierList()">Load Tier List</button>
 
   <script src="script.js"></script>
 </body>
